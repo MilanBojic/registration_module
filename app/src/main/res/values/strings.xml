@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Registration Module</string>
+    <string name="action_settings">Settings</string>
+    <string name="create_account">Create Account</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="test">Test</string>
+    <string name="password">Password</string>
+    <string name="create">create</string>
+    <string name="Register">Register</string>
+</resources>
