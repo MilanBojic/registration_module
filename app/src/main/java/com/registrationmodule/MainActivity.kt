@@ -10,13 +10,12 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
         val mLoginButton = findViewById<Button>(R.id.login)
-        val mRegisterButton = findViewById<Button>(R.id.register)
+        val mRegisterButton = findViewById<Button>(R.id.main_register_button)
 
         mLoginButton.setOnClickListener {
             goToLoginActivity()
@@ -25,8 +24,6 @@ class MainActivity : AppCompatActivity() {
         mRegisterButton.setOnClickListener {
             goToRegisterActivity()
         }
-
-
     }
 
     private fun goToLoginActivity() {
