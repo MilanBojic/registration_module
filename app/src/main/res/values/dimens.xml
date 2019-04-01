@@ -1,3 +1,4 @@
 <resources>
-    <dimen name="top_margin">36dp</dimen>
+    <dimen name="top_margin">72dp</dimen>
+    <dimen name="normal_margin">12dp</dimen>
 </resources>

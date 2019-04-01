@@ -8,4 +8,10 @@
     <string name="password">Password</string>
     <string name="create">create</string>
     <string name="Register">Register</string>
+    <string name="tDifferentUser">User is already exists, please create user with different username</string>
+    <string name="passwordEmpty">Password field is empty</string>
+    <string name="userEmpty">Username field is empty</string>
+    <string name="sqlite">SQLite DB</string>
+    <string name="storio">Storio DB</string>
+    <string name="room">Room DB</string>
 </resources>
