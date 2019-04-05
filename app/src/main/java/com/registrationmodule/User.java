@@ -1,7 +1,23 @@
 package com.registrationmodule;
 
-public class User {
+import android.provider.BaseColumns;
+import com.pushtorefresh.storio3.sqlite.annotations.StorIOSQLiteColumn;
+import com.pushtorefresh.storio3.sqlite.annotations.StorIOSQLiteType;
+
+import java.io.Serializable;
+
+
+@StorIOSQLiteType(table = "User", generateTableClass = false)
+public class User implements Serializable {
+
+    @StorIOSQLiteColumn(name = BaseColumns._ID, key = true, version = 0)
     int id;
+
+    @StorIOSQLiteColumn(name = "username")
+    String userName;
+
+    @StorIOSQLiteColumn(name = "password")
+    String password;
 
     public int getId() {
         return id;
@@ -26,7 +42,4 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-
-    String userName;
-    String password;
 }

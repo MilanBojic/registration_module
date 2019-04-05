@@ -7,10 +7,10 @@ import android.database.sqlite.SQLiteOpenHelper
 import com.registrationmodule.GlobalConst.DATABASE_NAME
 import com.registrationmodule.GlobalConst.USER_TABLE
 
-class UserDataBase : SQLiteOpenHelper {
+class SQLiteDB : SQLiteOpenHelper {
 
        private val create_table_query = "create table " + GlobalConst.USER_TABLE + " (" +
-       GlobalConst.COL_1 + " integer primary key autoincrement," +
+       GlobalConst.COL_1 + " INTEGER PRIMARY KEY AUTOINCREMENT," +
        GlobalConst.COL_2 + " text," +
        GlobalConst.COL_3 + " text" +
        ");"

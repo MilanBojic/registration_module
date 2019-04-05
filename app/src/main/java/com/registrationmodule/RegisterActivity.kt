@@ -23,14 +23,17 @@ class RegisterActivity : AppCompatActivity() {
 
     }
 
-    private lateinit var sqlLiteDataBase: UserDataBase
+    private lateinit var sqlLiteDataBase: SQLiteDB
+    private lateinit var storioApi: StorioApi
+
 
     private fun initViews() {
         mUserName = findViewById(R.id.register_username_field)
         mPassword = findViewById(R.id.register_password_field)
         mRegisterButton = findViewById(R.id.register_button)
         mGroupBox = findViewById(R.id.group_box_id)
-        sqlLiteDataBase = UserDataBase(this)
+        sqlLiteDataBase = SQLiteDB(this)
+        storioApi = StorioApi(this)
     }
 
     private fun storeToDataBase() {
@@ -59,6 +62,7 @@ class RegisterActivity : AppCompatActivity() {
         when (index) {
             GlobalConst.SQLITE -> list = sqlLiteDataBase.listOfAllUser()
             GlobalConst.STORIO -> {
+                list = storioApi.getAllUser()
             }
             GlobalConst.ROOM -> {
             }
@@ -88,6 +92,10 @@ class RegisterActivity : AppCompatActivity() {
                 sqlLiteDataBase.writableDatabase.insert(GlobalConst.USER_TABLE, null, contentValues)
             }
             GlobalConst.STORIO -> {
+                val user = User()
+                user.setUserName(userName)
+                user.setPassword(password)
+                storioApi.addUser(user)
             }
             GlobalConst.ROOM -> {
             }
