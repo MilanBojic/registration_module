@@ -1,18 +1,21 @@
-package com.registrationmodule;
+package com.registrationmodule.storio;
 
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.PrimaryKey;
-import io.reactivex.annotations.NonNull;
+import com.pushtorefresh.storio3.sqlite.annotations.StorIOSQLiteColumn;
+import com.pushtorefresh.storio3.sqlite.annotations.StorIOSQLiteType;
 
-@Entity(tableName = "User")
-public class UserRoom {
+import java.io.Serializable;
 
-    @PrimaryKey
-    @NonNull
+
+@StorIOSQLiteType(table = "User", generateTableClass = false)
+public class User implements Serializable {
+
+    @StorIOSQLiteColumn(name = "_id", key = true)
     Long id;
 
+    @StorIOSQLiteColumn(name = "username")
     String userName;
 
+    @StorIOSQLiteColumn(name = "password")
     String password;
 
     public Long getId() {

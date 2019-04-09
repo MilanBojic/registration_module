@@ -1,4 +1,4 @@
-package com.registrationmodule;
+package com.registrationmodule.storio;
 
 import android.content.ContentValues;
 import android.database.Cursor;

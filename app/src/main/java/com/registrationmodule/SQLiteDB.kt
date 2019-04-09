@@ -3,6 +3,7 @@ package com.registrationmodule
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import com.registrationmodule.storio.User
 import java.util.*
 
 class SQLiteDB : SQLiteOpenHelper {

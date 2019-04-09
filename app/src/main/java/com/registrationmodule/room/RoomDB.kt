@@ -1,8 +1,7 @@
-package com.registrationmodule
+package com.registrationmodule.room
 
 import android.arch.persistence.room.Database
 import android.arch.persistence.room.RoomDatabase
-
 
 
 @Database(entities = [UserRoom::class], version = 1)

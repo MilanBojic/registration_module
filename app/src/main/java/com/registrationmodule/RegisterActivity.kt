@@ -4,6 +4,10 @@ import android.content.ContentValues
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.*
+import com.registrationmodule.room.RoomApi
+import com.registrationmodule.room.UserRoom
+import com.registrationmodule.storio.StorioApi
+import com.registrationmodule.storio.User
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -62,19 +66,19 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun isValidationOk(userName: String, index: String): Boolean {
-        var list = ArrayList<User>()
-        var listRoom = ArrayList<UserRoom>()
+        var usersList = ArrayList<User>()
+        var userRoomList = ArrayList<UserRoom>()
         when (index) {
-            GlobalConst.SQLITE -> list = sqlLiteDataBase.getAllUsers()
+            GlobalConst.SQLITE -> usersList = sqlLiteDataBase.getAllUsers()
             GlobalConst.STORIO -> {
-                list = storioApi.getAllUsers()
+                usersList = storioApi.getAllUsers()
             }
             GlobalConst.ROOM -> {
-                listRoom = roomApi.getAllUsers();
+                userRoomList = roomApi.getAllUsers();
             }
         }
 
-        list.forEach { t: User? ->
+        usersList.forEach { t: User? ->
             run {
                 if (t!!.userName.equals(userName)) {
                     Toast.makeText(
@@ -86,7 +90,7 @@ class RegisterActivity : AppCompatActivity() {
                 }
             }
         }
-        listRoom.forEach { t: UserRoom? ->
+        userRoomList.forEach { t: UserRoom? ->
             if (t!!.userName.equals(userName)) {
                 Toast.makeText(
                     this,

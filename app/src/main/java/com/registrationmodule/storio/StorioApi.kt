@@ -1,8 +1,10 @@
-package com.registrationmodule
+package com.registrationmodule.storio
 
 import android.content.Context
 import com.pushtorefresh.storio3.sqlite.SQLiteTypeMapping
 import com.pushtorefresh.storio3.sqlite.queries.Query
+import com.registrationmodule.GlobalConst
+import com.registrationmodule.SQLiteDB
 import java.util.*
 
 class StorioApi(context: Context) {

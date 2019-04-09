@@ -1,4 +1,4 @@
-package com.registrationmodule
+package com.registrationmodule.room
 
 import android.arch.persistence.room.Room
 import android.content.Context
@@ -15,7 +15,7 @@ class RoomApi(val context: Context) {
     }
 
 
-    fun insertUserRoom(userRoom:UserRoom){
+    fun insertUserRoom(userRoom: UserRoom){
         val userDao = roomDB.userDAO
         userDao.insert(userRoom)
     }
