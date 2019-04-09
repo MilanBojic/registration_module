@@ -10,8 +10,10 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var mUserName: EditText
     private lateinit var mPassword: EditText
     private lateinit var mGroupBox: RadioGroup
-    private lateinit var mRegisterButton: Button
+    private lateinit var roomApi: RoomApi
 
+
+    private lateinit var mRegisterButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,8 +26,9 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private lateinit var sqlLiteDataBase: SQLiteDB
-    private lateinit var storioApi: StorioApi
 
+
+    private lateinit var storioApi: StorioApi
 
     private fun initViews() {
         mUserName = findViewById(R.id.register_username_field)
@@ -34,6 +37,7 @@ class RegisterActivity : AppCompatActivity() {
         mGroupBox = findViewById(R.id.group_box_id)
         sqlLiteDataBase = SQLiteDB(this)
         storioApi = StorioApi(this)
+        roomApi = RoomApi(this)
     }
 
     private fun storeToDataBase() {
@@ -59,12 +63,14 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun isValidationOk(userName: String, index: String): Boolean {
         var list = ArrayList<User>()
+        var listRoom = ArrayList<UserRoom>()
         when (index) {
-            GlobalConst.SQLITE -> list = sqlLiteDataBase.listOfAllUser()
+            GlobalConst.SQLITE -> list = sqlLiteDataBase.getAllUsers()
             GlobalConst.STORIO -> {
-                list = storioApi.getAllUser()
+                list = storioApi.getAllUsers()
             }
             GlobalConst.ROOM -> {
+                listRoom = roomApi.getAllUsers();
             }
         }
 
@@ -78,6 +84,16 @@ class RegisterActivity : AppCompatActivity() {
                     ).show()
                     return false
                 }
+            }
+        }
+        listRoom.forEach { t: UserRoom? ->
+            if (t!!.userName.equals(userName)) {
+                Toast.makeText(
+                    this,
+                    getString(R.string.tDifferentUser),
+                    Toast.LENGTH_SHORT
+                ).show()
+                return false
             }
         }
         return true
@@ -98,6 +114,10 @@ class RegisterActivity : AppCompatActivity() {
                 storioApi.addUser(user)
             }
             GlobalConst.ROOM -> {
+                val userRoom = UserRoom()
+                userRoom.setUserName(userName)
+                userRoom.setPassword(password)
+                roomApi.insertUserRoom(userRoom)
             }
         }
 

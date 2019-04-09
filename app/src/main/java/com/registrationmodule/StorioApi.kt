@@ -3,6 +3,7 @@ package com.registrationmodule
 import android.content.Context
 import com.pushtorefresh.storio3.sqlite.SQLiteTypeMapping
 import com.pushtorefresh.storio3.sqlite.queries.Query
+import java.util.*
 
 class StorioApi(context: Context) {
 
@@ -24,13 +25,10 @@ class StorioApi(context: Context) {
     }
 
     fun addUser(user: User) {
-        storioDB!!.put()
-            .`object`(user)
-            .prepare()
-            .executeAsBlocking()
+        storioDB.put().`object`(user).prepare().executeAsBlocking()
     }
 
-    fun getAllUser(): ArrayList<User> {
+    fun getAllUsers(): ArrayList<User> {
         val list = storioDB.get().listOfObjects(User::class.java)
             .withQuery(Query.builder().table(GlobalConst.USER_TABLE)
                 .build())
