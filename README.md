@@ -2,9 +2,9 @@
 
 ## What is this?
 
-Through one basic example(registration module), i want to demonstrate powerfully of each differents API wrapper
+Through one basic example(registration module), i want to demonstrate powerfully of each 
 
-(***ROOM***, ***STORIO*** AND ***SQLITE***)
+differents API wrapper(***ROOM***, ***STORIO*** AND ***SQLITE***)
 
 ## Requirements
 
