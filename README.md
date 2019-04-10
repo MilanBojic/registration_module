@@ -2,7 +2,7 @@
 
 ## What is this?
 
-Through one basic example(registration module), i want to shows how to persist data using a ***ROOM***, ***STORIO*** AND ***SQLITE***
+Through one basic example(registration module), i want to shows how to persist data using a ***Room***, ***Storio*** AND ***SQLite***
 
 ## Requirements
 
