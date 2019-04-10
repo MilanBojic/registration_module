@@ -13,6 +13,24 @@ Android Studio 3.0 (to compile and use)
 
 Eclipse is not supported
 
+## Download
+apply plugin: 'kotlin-kapt'
+
+implementation 'com.pushtorefresh.storio3:sqlite:3.0.0'
+implementation 'com.pushtorefresh.storio3:sqlite-annotations:3.0.0'
+kapt 'com.pushtorefresh.storio3:sqlite-annotations-processor:3.0.0'
+implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+// Extensions = ViewModel + LiveData
+implementation "android.arch.lifecycle:extensions:1.1.1"
+kapt "android.arch.lifecycle:compiler:1.1.1"
+
+// Room
+implementation "android.arch.persistence.room:runtime:1.1.1"
+kapt "android.arch.persistence.room:compiler:1.1.1"
+
+
+
 ## Example insert operations for each API
 
         when (index) {
