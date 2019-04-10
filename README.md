@@ -26,12 +26,14 @@ implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
 
 
 // Extensions = ViewModel + LiveData
+
 implementation "android.arch.lifecycle:extensions:1.1.1"
 
 kapt "android.arch.lifecycle:compiler:1.1.1"
 
 
 // Room
+
 implementation "android.arch.persistence.room:runtime:1.1.1"
 
 kapt "android.arch.persistence.room:compiler:1.1.1"
