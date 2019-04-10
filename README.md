@@ -2,7 +2,7 @@
 
 ## What is this?
 
-Through one basic example(registration module), i want to demonstrate powerfully of each different module wrapper(***ROOM***, ***STORIO*** AND ***SQLITE***)
+Through one basic example(registration module), i want to demonstrate powerfully of each differents module wrapper(***ROOM***, ***STORIO*** AND ***SQLITE***)
 
 ## Requirements
 
