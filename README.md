@@ -36,9 +36,9 @@ This will run the app on your device. You may need to download a newer version o
 
 ## What does it look like?
 
-![test image size](https://github.com/MilanBojic/fbeventsintegration/blob/master/image1.png)
+![test image size](https://github.com/MilanBojic/registration_module/blob/master/image1.png)
 
-![test image size](https://github.com/MilanBojic/fbeventsintegration/blob/master/image2.png)
+![test image size](https://github.com/MilanBojic/registration_module/blob/master/image2.png)
 
 
 
