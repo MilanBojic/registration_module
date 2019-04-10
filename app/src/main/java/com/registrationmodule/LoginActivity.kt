@@ -24,7 +24,7 @@ class LoginActivity : AppCompatActivity() {
 
         mLoginButton.setOnClickListener {
             if (isValidationOk()) {
-                login()
+                Toast.makeText(this, "Successfully login", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, getString(R.string.tErrorLogin), Toast.LENGTH_SHORT).show()
             }
@@ -67,10 +67,5 @@ class LoginActivity : AppCompatActivity() {
         storioApi = StorioApi(this)
         roomApi = RoomApi(this)
     }
-
-    fun login() {
-        Toast.makeText(this, "Successfully login", Toast.LENGTH_SHORT).show()
-    }
-
 
 }
