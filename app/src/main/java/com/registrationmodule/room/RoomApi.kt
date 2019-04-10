@@ -3,7 +3,7 @@ package com.registrationmodule.room
 import android.arch.persistence.room.Room
 import android.content.Context
 
-class RoomApi(val context: Context) {
+class RoomApi(context: Context) {
 
 
     private var roomDB: RoomDB

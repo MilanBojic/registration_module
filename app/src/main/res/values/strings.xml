@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Registration Module</string>
+    <string name="app_name">Registering</string>
     <string name="action_settings">Settings</string>
     <string name="create_account">Create Account</string>
     <string name="login">Login</string>
@@ -14,4 +14,8 @@
     <string name="sqlite">SQLite DB</string>
     <string name="storio">Storio DB</string>
     <string name="room">Room DB</string>
+    <string name="sign_in">Sign in</string>
+    <string name="tErrorSelect">Please select your database store</string>
+    <string name="tErrorLogin">Username or password is invalid</string>
+
 </resources>

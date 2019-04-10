@@ -26,9 +26,17 @@
     <Button
             android:id="@+id/register_button"
             android:layout_width="300dp"
-            android:text="@string/Register"
+            android:text="@string/create_account"
             android:layout_marginTop="24dp"
             android:layout_below="@+id/register_password_field"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:id="@+id/login_button"
+            android:layout_width="300dp"
+            android:text="@string/sign_in"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:layout_below="@+id/register_button"
             android:layout_height="wrap_content"/>
 
     <RadioGroup android:layout_width="wrap_content"
