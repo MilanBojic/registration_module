@@ -1,8 +1,9 @@
-# Registration Module
+# ROOM - STORIO - SQLITE
 
 ## What is this?
 
-Facebook events integration application - synchronization your events and presents in list of your events for the user who have been logged in facebook app.
+Through one basic example(registration module), i want to demonstrate powerfully of each differents API wrapper ***ROOM***, 
+***STORIO*** AND ***SQLITE***
 
 ## Requirements
 
@@ -12,27 +13,29 @@ Android Studio 3.0 (to compile and use)
 
 Eclipse is not supported
 
+## Example insert operations for each API
 
+        when (index) {
+            GlobalConst.SQLITE -> {
+                val contentValues = ContentValues()
+                contentValues.put(GlobalConst.COL_2, userName)
+                contentValues.put(GlobalConst.COL_3, password)
+                sqlLiteDataBase.writableDatabase.insert(GlobalConst.USER_TABLE, null, contentValues)
+            }
+            GlobalConst.STORIO -> {
+                val user = User()
+                user.userName = userName
+                user.password = password
+                storioApi.addUser(user)
+            }
+            GlobalConst.ROOM -> {
+                val userRoom = UserRoom()
+                userRoom.userName = userName
+                userRoom.password = password
+                roomApi.insertUserRoom(userRoom)
+            }
+        }
 
-## Getting Started
-
-Download Android Studio
-
-Launch Android Studio
-
-Start your new project
-
-Open your project's main Gradle file, in root directory (/build.gradle)
-
-Make sure you are using jcenter() in the repository block (mavenCentral() should work too)
-
-Open your app module Gradle file, for example /app/build.gradle
-
-Click Tools/Android/Sync Project with Gradle Files or click on the Sync icon in the top toolbar
-
-Click Run/Run 'app' to see if it's resolved correctly
-
-This will run the app on your device. You may need to download a newer version of Gradle, which will be available in the Android Studio UI if compile fails.
 
 ## What does it look like?
 
