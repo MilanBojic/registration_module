@@ -14,7 +14,6 @@ Android Studio 3.0 (to compile and use)
 Eclipse is not supported
 
 ## Download
-*apply plugin: 'kotlin-kapt'*
 
 *implementation 'com.pushtorefresh.storio3:sqlite:3.0.0'*
 
@@ -22,7 +21,6 @@ Eclipse is not supported
 
 *kapt 'com.pushtorefresh.storio3:sqlite-annotations-processor:3.0.0'*
 
-*implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'*
 
 
 // **Extensions = ViewModel + LiveData**
