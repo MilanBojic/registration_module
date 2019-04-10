@@ -2,7 +2,8 @@
 
 ## What is this?
 
-Through one basic example(registration module), i want to shows how to persist data using a ***Room***, ***Storio*** and ***SQLite***
+Through one simple example(registration module), i want to shows how to persist data using a ***Room***, ***Storio*** and ***SQLite***.
+Our simple application stored only username and password, of course the real registration module is much more complex.
 
 ## Requirements
 
