@@ -2,7 +2,7 @@
 
 ## What is this?
 
-Through one basic example(registration module), i want to demonstrate powerfully of each differents module wrapper(***ROOM***, ***STORIO*** AND ***SQLITE***)
+Through one basic example(registration module), i want to demonstrate powerfully of each differents API wrapper(***ROOM***, ***STORIO*** AND ***SQLITE***)
 
 ## Requirements
 
@@ -12,7 +12,7 @@ Android Studio 3.0 (to compile and use)
 
 Eclipse is not supported
 
-## Example insert operations for each wrapper
+## Example insert operations for each API
 
         when (index) {
             GlobalConst.SQLITE -> {
